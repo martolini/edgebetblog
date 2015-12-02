@@ -1,0 +1,59 @@
+html {
+  font-size: 18px;
+  font-family: Georgia;
+}
+
+strong {
+  font-weight: 600;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  line-height: 1.58;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.003em;
+  word-wrap: break-word;
+}
+
+ul > li > a {
+  color: #546e7a;
+}
+
+.card-image {
+  max-height: 50% !important;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.splash {
+  background-image: url('/static/img/cover.jpg');
+  background-repeat:no-repeat;
+  background-size:100%;
+  background-position:center center;
+}
+
+.splash p {
+}
+
+.brand-logo img {
+  margin: auto;
+  padding: auto;
+  height: 45px;
+  margin-top: 8px;
+}
+
+.nav-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.clearfix {
+  height: 20px;
+}

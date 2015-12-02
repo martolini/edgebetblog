@@ -1,0 +1,22 @@
+mixin articleMixin(title, intro, slug, author, image, alt, minutes)
+  .col.s12
+    .card.large.hoverable
+      .card-image
+        img(src='/static/img/#{image}')
+      .card-content
+        h5= title
+        p= intro
+      .card-action
+        a(href='/#{slug}') Read more
+        span.right.blue-grey-text #{minutes} minute read by #{author}
+
+extends base
+block title
+  | Edgebet blog
+
+block content
+  .container
+    .row
+      .col.s10.push-s1
+        each article, slug in articles
+          +articleMixin(article.title, article.intro, slug, article.author, article.image, article.alt, article.minutesRead)

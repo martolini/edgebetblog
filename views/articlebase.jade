@@ -1,0 +1,18 @@
+extends base
+block title
+  | #{article.title} - Inside Edgebet
+
+block content
+  .container
+    .row
+      .col.s10.push-s1
+        article
+          block articleContent
+    .row
+      .col.s10.push-s1
+        #spot-im-frame-inpage(data-post-id=article.id)
+
+block scripts
+  script.
+    !function(t,e,n){
+      function a(t){var  a=e.createElement("script");a.type="text/javascript" ,a.async=!0,a.src=("https:"===e.location.protocol?"https":"http")+":"+n,(t||e.body||e.head).appendChild(a)}function o(){var  t=e.getElementsByTagName("script"),n=t[t.length-1];return n.parentNode} var  p=o();t.spotId="sp_2gBQOBIo",t.parentElement=p,a(p)}(window.SPOTIM={},document,"//www.spot.im/launcher/bundle.js");
