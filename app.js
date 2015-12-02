@@ -4,11 +4,12 @@ import articles from './config/articles'
 import path from 'path'
 
 const app = express()
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 app.set('views', './views')
 app.set('view engine', 'jade')
 
 app.use('/static', express.static(path.join(__dirname, 'static')))
+app.use(favicon(path.join(__dirname, 'static/img/favicon.ico')))
 
 const guestArticles = {};
 const educationArticles = {};
@@ -43,7 +44,7 @@ app.get('/', (req, res) => {
 })
 
 app.use((req, res, next) => {
-  res.status(500).send('This page doesn\'t exist;')
+  res.status(500).send('This page doesn\'t exist.')
 })
 
 app.listen(PORT, () => {
