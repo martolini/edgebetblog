@@ -7,6 +7,11 @@ block content
     .row
       .col.s10.push-s1
         article
+          p.blue-grey-text
+            i.material-icons av_timer
+            | A #{article.minutesRead} minute read by #{article.author}
+          h3
+            block articleTitle
           block articleContent
     .row
       .col.s10.push-s1
