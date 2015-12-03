@@ -13,17 +13,17 @@ articles['staying-under-the-radar-avoid-getting-limited'] = {
   minutesRead: 5
 }
 
-articles['nine-doubled-bankroll-in-two-months'] = {
+articles['10x-bankroll-in-two-months'] = {
   id: 3,
-  title: 'Guest post: Nine-doubled my bankroll in under two months',
+  title: 'Guest post: My bankroll increased 10x in under two months',
   guest: true,
-  template: 'nine_doubled_bankroll',
+  template: '10x_bankroll',
   intro: 'Being a bit skeptical at first I started with $100 just to check out what all the fuzz was about.',
   image: 'tobias.png',
-  alt: 'Nine doubled bankroll in under two months',
+  alt: '10xed my bankroll in under two months',
   date: new Date(2015, 12, 3),
   minutesRead: 5,
-  author: 'Norwegian student'
+  author: 'Tobias'
 }
 
 articles['welcome-to-the-edgebet-blog'] = {
