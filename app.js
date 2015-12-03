@@ -4,7 +4,8 @@ import articles from './config/articles'
 import path from 'path'
 
 const app = express()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
+const SITE_URL = 'http://blog.edgebet.net'
 app.set('views', './views')
 app.set('view engine', 'jade')
 
@@ -25,7 +26,7 @@ for (let id in articles) {
 app.get('/:article', (req, res, next) => {
   const article = articles[req.params.article]
   if (!!article) {
-    res.render('articles/' + article.template, {'article': article})
+    res.render('articles/' + article.template, {article: article, url: SITE_URL + req.url})
   } else {
     next()
   }

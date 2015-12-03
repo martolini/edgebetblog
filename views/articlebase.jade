@@ -5,6 +5,8 @@ block meta
   meta(name='og:title', content=article.title)
   meta(name='og:image', content='http://blog.edgebet.net/static/img/#{article.image}')
   meta(name='og:descriptioon', content=article.intro)
+block links
+  link(rel="stylesheet", href="/static/css/social-buttons.css")
 block title
   | #{article.title} - Inside Edgebet
 
@@ -18,7 +20,19 @@ block content
             | A #{article.minutesRead} minute read by #{article.author}
           h3
             block articleTitle
+          .social-sharing.is-large(data-permalink=url)
+            a.share-facebook(target='_blank', href="http://www.facebook.com/sharer.php?u=#{url}")
+              span.icon.icon-facebook
+              span.share-title Share
+              span.share-count 0
           block articleContent
+    .row
+      .col.s10.push-s1
+        .social-sharing.is-large(data-permalink=url)
+          a.share-facebook(target='_blank', href="http://www.facebook.com/sharer.php?u=#{url}")
+            span.icon.icon-facebook
+            span.share-title Share
+            span.share-count 0
     .row
       .col.s10.push-s1
         #spot-im-frame-inpage(data-post-id=article.id)
@@ -33,3 +47,5 @@ block scripts
         article: '#{article.title}'
       });
     });
+  script(type='text/javascript', src='/static/js/social-buttons.js')
+
