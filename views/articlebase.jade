@@ -1,4 +1,10 @@
 extends base
+
+block meta
+  meta(name='description', content=article.intro)
+  meta(name='og:title', content=article.title)
+  meta(name='og:image', content='http://blog.edgebet.net/static/img/#{article.image}')
+  meta(name='og:descriptioon', content=article.intro)
 block title
   | #{article.title} - Inside Edgebet
 
