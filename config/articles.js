@@ -40,7 +40,7 @@ articles['welcome-to-the-edgebet-blog'] = {
 }
 
 export const andersArticles = {}
-andersArticles['anders/10k-til-100k-på-15-uker'] = {
+andersArticles['anders/10k-til-100k-pa-15-uker'] = {
   title: 'Fra 10k til 100k på 15 uker',
   guest: true,
   template: '10k_til_100k',
