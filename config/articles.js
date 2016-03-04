@@ -1,4 +1,4 @@
-var articles = {};
+export const articles = {};
 
 articles['staying-under-the-radar-avoid-getting-limited'] = {
   id: 1,
@@ -39,5 +39,15 @@ articles['welcome-to-the-edgebet-blog'] = {
   author: 'Team Edgebet'
 }
 
-
-module.exports = articles;
+export const andersArticles = {}
+andersArticles['anders/10k-til-100k-på-15-uker'] = {
+  title: 'Fra 10k til 100k på 15 uker',
+  guest: true,
+  template: '10k_til_100k',
+  intro: 'Anders er student, og vi skal følge han opp ukentlig på veien til sitt mål om å gjøre om 10k til 100k på 15 uker.',
+  image: '10k_to_100k.png',
+  alt: '10k to 100k',
+  date: new Date(2016, 3, 4),
+  minutesRead: 3,
+  author: 'Anders / Tobias'
+}

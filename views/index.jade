@@ -2,13 +2,16 @@ mixin articleMixin(title, intro, slug, author, image, alt, minutes)
   .col.s12
       .card.large
         .card-image
-          img(src='/static/img/#{image}')
+          a(href='/#{slug}')
+            img(src='/static/img/#{image}')
         .card-content
           h5= title
           p= intro
         .card-action
           a(href='/#{slug}') Read more
-          span.right.blue-grey-text #{minutes} minute read by #{author}
+          span.right.blue-grey-text
+            i.material-icons av_timer
+            | #{minutes} minute read by #{author}
 
 extends base
 block title

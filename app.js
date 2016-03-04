@@ -1,6 +1,6 @@
 import express from 'express'
 import favicon from 'serve-favicon'
-import articles from './config/articles'
+import { articles, andersArticles } from './config/articles'
 import path from 'path'
 
 const app = express()
@@ -38,6 +38,19 @@ app.get('/guest-articles', (req, res) => {
 
 app.get('/education-articles', (req, res) => {
   res.render('index', {articles: educationArticles})
+})
+
+app.get('/anders', (req, res) => {
+  res.render('index', { articles: andersArticles })
+})
+
+app.get('/anders/:article', (req, res, next) => {
+  const article = andersArticles[`anders/${req.params.article}`]
+  if (!!article) {
+    res.render(`anders/${article.template}`, { article: article, url: SITE_URL + req.url})
+  } else {
+    next()
+  }
 })
 
 app.get('/', (req, res) => {
