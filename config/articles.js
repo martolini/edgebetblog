@@ -40,6 +40,19 @@ articles['welcome-to-the-edgebet-blog'] = {
 }
 
 export const andersArticles = {}
+
+andersArticles['anders/min-forste-uke-med-edgebet'] = {
+  title: 'Uke nummer en med Edgebet',
+  guest: true,
+  template: 'uke_1',
+  intro: 'Etter kun en uke med Edgebet, har jeg merket en del svingninger',
+  image: 'profitt_anders_uke1.png',
+  alt: 'Uke nummer en med edgebet',
+  date: new Date(2016, 3, 10),
+  minutesRead: 4,
+  author: 'Anders'
+}
+
 andersArticles['anders/10k-til-100k-pa-15-uker'] = {
   title: 'Fra 10k til 100k på 15 uker',
   guest: true,
