@@ -2,10 +2,13 @@ extends base
 
 block meta
   meta(name='description', content=article.intro)
-  meta(name='og:title', content=article.title)
-  meta(name='og:image', content='http://blog.edgebet.net/static/img/#{article.image}')
-  meta(name='og:descriptioon', content=article.intro)
-  meta(name='og:url', content=article.url)
+  meta(name='author', content='https://www.edgebet.net')
+  meta(name='image', content='http://blog.edgebet.net/static/img/#{article.image}')
+  meta(property='og:title', content=article.title)
+  meta(property='og:type', content='article')
+  meta(property='og:image', content='http://blog.edgebet.net/static/img/#{article.image}')
+  meta(property='og:url', content=article.url)
+  meta(property='og:description', content=article.intro)
 block links
   link(rel="stylesheet", href="/static/css/social-buttons.css")
 block title
