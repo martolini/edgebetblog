@@ -1,5 +1,18 @@
 export const articles = {};
 
+articles['what-is-an-edgebet-and-why-does-it-happen'] = {
+  id: 4,
+  title: 'What is an edgebet and how does it happen',
+  intro: "Bookmakers can be slow and make mistakes, and that's what we're taking advantage of. Quite often you get a window of opportunity to place very high value bets.",
+  guest: false,
+  template: 'what_is_an_edgebet',
+  author: 'Martin',
+  date: new Date(2016, 14, 3),
+  image: 'chelsea_city.png',
+  alt: 'What is an edgebet',
+  minutesRead: 5
+}
+
 articles['staying-under-the-radar-avoid-getting-limited'] = {
   id: 1,
   title: 'Avoid getting limited from bookmakers',
