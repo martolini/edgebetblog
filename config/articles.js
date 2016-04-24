@@ -7,7 +7,8 @@ articles['edgebet-version-2'] = {
   guest: false,
   template: 'edgebet_20',
   author: 'Martin',
-  new: new Date(2016, 24, 4),
+  date: new Date(2016, 24, 4),
+  image: 'dashboard_edgebet20.png',
   alt: 'Edgebet version 2.0',
   minutesRead: 5
 }
