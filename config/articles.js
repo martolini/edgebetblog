@@ -1,5 +1,17 @@
 export const articles = {};
 
+articles['edgebet-version-2'] = {
+  id: 5,
+  title: 'Edgebet version 2.0',
+  intro: "We've cooked all of your feedback into a brand new version of Edgebet. In this short article - we'll lay out all the major changes. We hope you're as excited as we are!",
+  guest: false,
+  template: 'edgebet_20',
+  author: 'Martin',
+  new: new Date(2016, 24, 4),
+  alt: 'Edgebet version 2.0',
+  minutesRead: 5
+}
+
 articles['what-is-an-edgebet-and-why-does-it-happen'] = {
   id: 4,
   title: 'What is an edgebet and how does it happen',

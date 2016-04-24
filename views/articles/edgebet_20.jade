@@ -1,0 +1,25 @@
+extends ../articlebase
+block articleTitle
+  | Edgebet version 2.0
+block articleContent
+  p
+    | We've cooked all of your feedback into a brand new version of Edgebet. In this short article we'll lay out all the major changes. We hope you're as excited as we are!
+  p
+    | If you want to follow the progress of the edgebet community - we now have published all stats on our <a href='https://edgebet.net'>front page</a>! There you can see <strong>todays turnover</strong>, <strong>total profit</strong> and <strong>total turnover</strong>.
+  p
+    | Our <strong>odds engine</strong> is completely rebuilt - picking up stale lines and new edgebets a lot faster than before. That means less time wasted checking old bets. All the edgebets are not updated in real time, so there is no need to manually refresh the page ever again.
+  p
+    | The most requested feature we've had by far, is a graph displaying the expected value of your bets. We're calculating the expected value of the individual bet as <strong>edge * wager</strong> at the time you placed the bet. This EV graph is now placed at the new <strong>analytics</strong> page along with more in-depth stats of your game. There will always be a difference in the total profit line and the EV line, but the more bets you place, the more they will be aligned.
+  img.img-responsive.center-block(src='/static/img/evgraph.png', target='_blank', width='60%')
+  p
+    | We've added a turnover graph to the analytics page as well. This shows your total amount wagered with number of bets at the x-axis. <strong>turnover * average ROI</strong> is your total profit, so the higher the turnover - the higher the profit. That's something to take note of, dedication counts for so much of your results. A starting bankroll of $10,000 where only $500 are wagered every day will yield the same profits as a $500 starting bankroll that's wagered every single day.
+  p
+    | We have done some minor changes to the way we display edgebets. The changes are made based on feedback as well as expertise of professional bettors. In the table, we only display the <strong>teams</strong>, <strong>time until kick off</strong>, <strong>odds type</strong>, <strong>odds</strong>, <strong>bet size</strong> and <strong>edge</strong>. When you click on a specific edgebet, it will stay locked in place at the right side of the screen (at the bottom if you're on a very small screen). This will help you keep track of the current edgebet while navigating on the respective bookmakers. The sport, league and country are only showed in the selected edge box - as that information is not necessary before placing the bet.
+  img.img-responsive.center-block(src='/static/img/single_edgebet.png', width='100%')
+  <br />
+  <br />
+  img.img-responsive(src='/static/img/selected_edgebet.png', width='50%')
+  p
+    | Huge parts of our community have for a long time asked for more educational material for sports betting. We are proud to announce our new youtube channel where we will post educational videos and interviews on a lot of different topics like <strong>market movements</strong>, <strong>EV</strong>, <strong>variance</strong>, <strong>turnover</strong> and <strong>more</strong>. If you have special video requests, just reach out to us. :-)
+  p
+    | We are continuously doing updates and releasing new awesome features as fast as we can. If you have any input on how we can make edgebet even better for you don't hesitate to reach out! It's because of you we do this!
