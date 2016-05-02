@@ -67,6 +67,19 @@ articles['welcome-to-the-edgebet-blog'] = {
 
 export const andersArticles = {}
 
+andersArticles['anders/opp-og-ned-og-opp-og-ned'] = {
+  title: 'Opp og ned og opp og ned',
+  guest: true,
+  template: 'nedopp',
+  intro: 'Det har vært store svingninger, begynner det kanskje å stabilisere seg nå etter 600 spill?',
+  image: 'oppnedevgraf.png',
+  alt: 'Opp og ned og opp og ned',
+  date: new Date(2016, 5, 1),
+  minutesRead: 4,
+  author: 'Anders / Tobias'
+}
+
+
 andersArticles['anders/min-forste-uke-med-edgebet'] = {
   title: 'Uke nummer en med Edgebet',
   guest: true,
