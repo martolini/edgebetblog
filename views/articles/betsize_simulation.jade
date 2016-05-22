@@ -1,0 +1,152 @@
+extends ../articlebase
+block articleTitle
+  | How bet sizing impacts your game
+block articleContent
+  p
+    | Bet sizing plays an extremely important role in any profitable betting strategy, and in this article I'm gonna try to give some insight into exactly how important it is. Nothing speaks louder than doing your own simulations, so at the bottom of this article, there is a simulation engine that uses
+    strong
+      |  bets placed by our community
+    |  so you can play around with our actual data!
+  p
+    | In the sports betting community, there are mainly two general staking strategies bettors use. A
+    strong
+      |  flat stake
+    | , and a
+    strong
+      |  proportional stake.
+    |  With a flat bet size, you either put the same wager on every single game, or you put the same wager on games that have the same odds and edge. Flat bet sizing is fairly easy to use, but it's hard to select a proper size. A size too big will increase the chance of going broke, while a size too low will not yield big enough profits.
+  p
+    | A proportional strategy is where you place a certain percentage of your current bankroll on each bet.
+    strong
+      |  Kelly's Criterion
+    |  is a formula that
+    strong
+      |  maximizes the growth rate of your bankroll
+    | . The formula for the Kelly's Criterion is $$\frac{P * G - 1}{G - 1}$$ where P is the probability of success and G is the odds you're given. Let's take an example.
+  p
+    | If you were to bet on a coinflip with the odds of 2.1, you would've had an edge of \(\frac{2.1}{2} = 0.05 = 5\%\) and kelly would suggest $$\frac{0.5 * 2.1 - 1}{2.1 - 1} = 0.04545$$ This means you should bet 4.545% of your current bankroll. Let's take the scenario where this is ran 2 times with a starting bankroll of $100, you win one and lose one.
+    ol
+      li You bet \(0.04545 * 100 = 4.545\) and lose, now you've got \($100 - $4.545 = $95.455\) left.
+      li You bet \(0.04545 * 95.455 = 4.338\) and win, now you've got \($95.455 + $4.338 * (2.1 - 1) = $100.227\) left. (4.338 * 1.1 is the net return of the bet)
+  p
+    | The interesting thing, is that the order of the bets does not matter. You would've ended up with $100.227 if you'd won the first one and lost the second one.
+  p
+    | Now over to a practical scenario. The example written over is not exactly representative for the common bettor, because it assumes that you know the outcome of the previous bet before placing the next one. In the sports betting world, one would usually have between 5-50 open bets at the time. This obviously affects the bet sizing. If you were to place 10 bets in a row with similar odds and edge, the bet sizing would decrease as your current bankroll decreases with each bet. If every single bet were with the odds of 2.1 and edge of 5%, you would expect to win 50% of the bets. This gives you the possibility of losing all your biggest bets and winning all your smallest bets - hence ending up in the negatives after placing nothing but profitable bets. It's worth noting that the other way around could occur, you could win all your biggest bets hence flipping a huge profit.
+  p
+    | Here is a distribution of all possible combinations of bets with odds of 2.1 and edge of 5%, giving a win rate of 50%. There are 20 open bets, and it randomly picks 10 winners and 10 losers, so it's running perfectly every time - and only a matter of how the wins and loses are distributed. The x-axis shows the bankroll after the bets are settled relative to the starting bankroll, and the y-axis shows the number of occurences (out of the 184756 possible combinations). It follows the kelly bet sizing, so the bet size decreases for each bet as it's always placing 4.545% of its current bankroll. The blue shows the results for 100% of kelly, the orange for placing 50% of kelly, and the green for placing 30% of kelly.
+  img.responsive-img(src='/static/img/kelly-histogram.png')
+  p
+    | As we can see from the plot, the 100% of kelly (blue line) yields the highest possible return, and the highest average (~1.03). However the spread is huge. One could end up with everything from 88% to 117% of your starting bankroll. As you decrease the fraction of kelly to 50% and 30%, the spread gets alot smaller. The probability of ending up in profit skyrockets, where as the average return gets lowered ever so slightly. It's very important to note that
+    strong
+      |  by betting a lower fraction of kelly, you risk less money
+    |. By betting 100% of kelly, you risk ~60% of your bankroll to grow it to an average of 104%. By betting 50% of kelly, you risk ~37% of your bankroll to grow it to an average of 102%. By betting 30% of kelly, you risk only ~24% to grow your bankroll to an average of 101%.
+  ul.collapsible(data-collapsible='accordion')
+    li
+      .collapsible-header
+        i.material-icons filter_drama
+        | Stats of 100% kelly
+      .collapsible-body
+        table.bordered.striped
+          tbody
+            tr
+              td Turnover
+              td 0.606
+            tr
+              td EV
+              td 1.030
+            tr
+              td Best case
+              td 1.176
+            tr
+              td Worst case
+              td 0.885
+            tr
+              td Probability of profit
+              td 0.778
+            tr
+              td Probability of EV or better
+              td 0.5
+            tr
+              td Standard deviation
+              td 0.039
+    li
+      .collapsible-header
+        i.material-icons filter_drama
+        | Stats of 50% kelly
+      .collapsible-body
+        table.bordered.striped
+          tbody
+            tr
+              td Turnover
+              td 0.369
+            tr
+              td EV
+              td 1.018
+            tr
+              td Best case
+              td 1.063
+            tr
+              td Worst case
+              td 0.974
+            tr
+              td Probability of profit
+              td 0.941
+            tr
+              td Probability of EV or better
+              td 0.5
+            tr
+              td Standard deviation
+              td 0.012
+    li
+      .collapsible-header
+        i.material-icons filter_drama
+        | Stats of 30% kelly
+      .collapsible-body
+        table.bordered.striped
+          tbody
+            tr
+              td Turnover
+              td 0.240
+            tr
+              td EV
+              td 1.012
+            tr
+              td Best case
+              td 1.030
+            tr
+              td Worst case
+              td 0.995
+            tr
+              td Probability of profit
+              td ~1.0
+            tr
+              td Probability of EV or better
+              td 0.5
+            tr
+              td Standard deviation
+              td 0.005
+  p
+    | There is no doubt that following full kelly is the strategy that would maximize the growth of your bankroll. Many people will tell you to bet less than the Kelly formula tells you to. Two reasons are generally given for this.
+    ol
+      li The edge may change. If you place a bet 10 hours before kick off, the odds can swing out of your favor - or more in your favor. By placing the full amount Kelly proposes, it could lead to a very big bet on what ends up being a non-profitable bet.
+      li The Kelly formula leads to extreme volatility, the probability of being badly down for an unacceptable long strech may occur.
+  p
+    | Additionally, placing a lower fraction of kelly would generally decrease your bet size, making the probability of getting limited by the bookmakers smaller.
+  p
+    | This was a very technical article - but here comes the best part. The simulation engine displayed right here is running simulations on
+    strong
+      |  actual bets
+    |  placed by our community. By typing in different stats, you can see how a typical scenario would happen. It draws a completely random subset, so each time you simulate a different graph will be displayed. A few things to note
+  ol
+    li Open bets is how many open bets you want to place simulatenously. That means 20 bets are placed following the fraction of kelly, and after they are placed they are all settled.
+    li Cycles is how many times this will happen. Having 10 open bets in 10 cycles would give you a total of 100 bets.
+    li There are never placed more than one bet on each match. Which bet that is placed on the individual matches are completely random.
+    li There is a max bet of 2000 here, as bookies imposes limits on most games. That means that the growth will stagnate if the bankroll ever gets so large that it wants to place more than that.
+    li This simulates with all edges over 1%.
+
+  #betsize-simulation
+  p I really hope this gave some insight into how important bet sizing is. Additionaly, I want to point out that there are no perfect bet sizing that fits all. The fraction of kelly you're comfortable with placing depends on your personal risk profile. Do whatever you're comfortable with. On edgebet - you can now select between 3 different betting sizes, 100%, 50% and 30%. Just go to your profile, and it'll be an option right next to where you select your initial bankroll!
+block append scripts
+  script(src='/static/js/betsize-simulation.js', type='text/javascript')
+  script(type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML")
+

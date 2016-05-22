@@ -1,5 +1,18 @@
 export const articles = {};
 
+articles['betsize-and-simulations'] = {
+  id: 6,
+  title: 'Bet size and simulations',
+  intro: 'Learn more about how bet sizing impacts your game, and do simulations on bets made by the edgebet community!',
+  guest: false,
+  template: 'betsize_simulation',
+  author: 'Martin',
+  date: new Date(2016, 21, 5),
+  image: 'betsizing_front_image.png',
+  alt: 'Bet sizing - optimizing your game',
+  minutesRead: 8
+}
+
 articles['edgebet-version-2'] = {
   id: 5,
   title: 'Edgebet version 2.0',
