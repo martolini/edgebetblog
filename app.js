@@ -4,7 +4,7 @@ import { articles, andersArticles } from './config/articles'
 import path from 'path'
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 const SITE_URL = 'http://blog.edgebet.net'
 app.set('views', './views')
 app.set('view engine', 'jade')

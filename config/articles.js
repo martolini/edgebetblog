@@ -1,5 +1,18 @@
 export const articles = {};
 
+articles['variance-and-how-to-minimize-it'] = {
+  id: 7,
+  title: 'Variance and how to minimize it',
+  intro: 'Being a sports bettor is never more emotional than when your bankroll swings like crazy - downswings and upswings alike. In this article, we\'ll discuss what you can do to minimize your variance.',
+  guest: false,
+  template: 'variance',
+  author: 'Martin',
+  date: new Date(2016, 31, 5),
+  image: 'set_reach_goal.jpg',
+  alt: 'Variance and how to minimize it',
+  minutesRead: 5
+}
+
 articles['betsize-and-simulations'] = {
   id: 6,
   title: 'Bet size and simulations',

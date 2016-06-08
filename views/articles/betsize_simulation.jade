@@ -1,6 +1,6 @@
 extends ../articlebase
 block articleTitle
-  | How bet sizing impacts your game
+  | How bet sizing impacts your game, a technical analysis
 block articleContent
   p
     | Bet sizing plays an extremely important role in any profitable betting strategy, and in this article I'm gonna try to give some insight into exactly how important it is. Nothing speaks louder than doing your own simulations, so at the bottom of this article, there is a simulation engine that uses
@@ -24,7 +24,7 @@ block articleContent
       |  maximizes the growth rate of your bankroll
     | . The formula for the Kelly's Criterion is $$\frac{P * G - 1}{G - 1}$$ where P is the probability of success and G is the odds you're given. Let's take an example.
   p
-    | If you were to bet on a coinflip with the odds of 2.1, you would've had an edge of \(\frac{2.1}{2} = 0.05 = 5\%\) and kelly would suggest $$\frac{0.5 * 2.1 - 1}{2.1 - 1} = 0.04545$$ This means you should bet 4.545% of your current bankroll. Let's take the scenario where this is ran 2 times with a starting bankroll of $100, you win one and lose one.
+    | If you were to bet on a coinflip - in a fair world you'd get an odds of 2. If you were to get odds of 2.1, you would've had an edge of \(\frac{2.1}{2} = 0.05 = 5\%\) and kelly would suggest $$\frac{0.5 * 2.1 - 1}{2.1 - 1} = 0.04545$$ This means you should bet 4.545% of your current bankroll. Let's take the scenario where this is ran 2 times with a starting bankroll of $100, you win one and lose one.
     ol
       li You bet \(0.04545 * 100 = 4.545\) and lose, now you've got \($100 - $4.545 = $95.455\) left.
       li You bet \(0.04545 * 95.455 = 4.338\) and win, now you've got \($95.455 + $4.338 * (2.1 - 1) = $100.227\) left. (4.338 * 1.1 is the net return of the bet)
@@ -128,10 +128,14 @@ block articleContent
   p
     | There is no doubt that following full kelly is the strategy that would maximize the growth of your bankroll. Many people will tell you to bet less than the Kelly formula tells you to. Two reasons are generally given for this.
     ol
-      li The edge may change. If you place a bet 10 hours before kick off, the odds can swing out of your favor - or more in your favor. By placing the full amount Kelly proposes, it could lead to a very big bet on what ends up being a non-profitable bet.
+      li The edge may change. If you place a bet 10 hours before kick off, the odds can swing both in and out of your favor. By placing a fraction of kelly, let's say 50% you have more rooms for error if the edge slightly decrease. If it increases, you can simply place more money on that bet.
       li The Kelly formula leads to extreme volatility, the probability of being badly down for an unacceptable long strech may occur.
   p
     | Additionally, placing a lower fraction of kelly would generally decrease your bet size, making the probability of getting limited by the bookmakers smaller.
+  p
+    strong
+      | Do not bet more than Kelly suggests
+    | , so if you chose to go high risk (100% of kelly), do not over-bet. That will actually decrease the growth of your bankroll - as the full kelly value is a maximizer.
   p
     | This was a very technical article - but here comes the best part. The simulation engine displayed right here is running simulations on
     strong
