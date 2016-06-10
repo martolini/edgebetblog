@@ -1,5 +1,18 @@
 export const articles = {};
 
+articles['increasing-the-value-of-each-bookmaker'] = {
+  id: 8,
+  title: 'Increasing the value of each bookmaker',
+  intro: 'Getting shut out of a bookmaker is always a bummer, but there are a few things you can do to really maximize your value throughout your edgebet journey.',
+  guest: false,
+  template: 'increasing_bookmaker_value',
+  author: 'Martin',
+  date: new Date(2016, 9, 6),
+  image: 'increasing_value.jpg',
+  alt: 'Maximizing your value',
+  minutesRead: 4
+}
+
 articles['variance-and-how-to-minimize-it'] = {
   id: 7,
   title: 'Variance and how to minimize it',
